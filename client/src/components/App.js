@@ -15,15 +15,20 @@ const useStyles = makeStyles({
 
 function App() {
   const [city, setCity] = useState();
+  const [selectedCity, setSelectedCity] = useState();
 
   const classes = useStyles();
+
+  const handleClick = ()=>{
+    setSelectedCity(city);
+  }
   return (
     <div className="App">
       <header className="App-header">
         <Search setCity={setCity}/>
-        <Button className={classes.button}>GET WEATHER</Button>
+        <Button className={classes.button} onClick={handleClick}>GET WEATHER</Button>
         City:{city ? city.name : ''}
-        <Forecast city={city}/>
+        <Forecast city={selectedCity}/>
       </header>
     </div>
   );
