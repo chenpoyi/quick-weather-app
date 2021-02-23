@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import Search from './Search';
+import Forecast from './Forecast';
 import { makeStyles } from '@material-ui/core/styles';
 import {Button} from '@material-ui/core'
 import { withTheme } from '@material-ui/styles';
@@ -22,6 +23,7 @@ function App() {
         <Search setCity={setCity}/>
         <Button className={classes.button}>GET WEATHER</Button>
         City:{city ? city.name : ''}
+        <Forecast city={city}/>
       </header>
     </div>
   );

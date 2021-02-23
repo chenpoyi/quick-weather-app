@@ -1,5 +1,3 @@
-// const cities = require('all-the-cities');
-// export function getLocations(){
-//   // return cities.filter(city => city.name.match('Albuquerque'));
-
-// }
+export const getForecast = (lat, lng)=>{
+  console.log('Lat: ', lat, 'Lng: ', lng);
+}
